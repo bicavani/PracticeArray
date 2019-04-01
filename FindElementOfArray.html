@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>FindElementOfArray</title>
+</head>
+<body>
+  <script>
+    let array= [ 1,2,3,4,5,6,7,8,9];
+    let inputNumber= prompt("inputNumber = ", '');
+    let notElement= true;
+    for (let i= 0; i< array.length; i++){
+        if (array[i]== inputNumber) {
+            document.write('array['+ i+ '] = '+ array[i]);
+            notElement= false;
+        }
+    }
+    if (notElement) document.write('Gia tri da nhap khong nam trong mang Array');
+  </script>
+</body>
+</html>

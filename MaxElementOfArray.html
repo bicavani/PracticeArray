@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MaxElementOfArray</title>
+</head>
+<body>
+  <script>
+    let array= [1,4,2,7,0,5,19,23,1,32,4,14];
+    let maxElement= array[0];
+    let index= 0;
+    for (let i= 1; i< array.length; i++){
+        let isMaxElement= maxElement<= array[i];
+        if (isMaxElement) {
+            maxElement= array[i];
+            index= i;
+        }
+    }
+    document.write("array = "+ array+ "<br>");
+    document.write("MaxElement la: "+ maxElement+ " at position: "+ index);
+  </script>
+</body>
+</html>
