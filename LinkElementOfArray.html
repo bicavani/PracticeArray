@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>LinkElementOfArray</title>
+</head>
+<body>
+  <script>
+    let myColor = ["Red", "Green", "White", "Black", "bicavani","pink", "gray"];
+    document.write(myColor + "<br>");
+    let linkElementOfArray = '"';
+    for (let i = 0; i < myColor.length - 1; i++) {
+        linkElementOfArray += myColor[i] + ',';
+    }
+    linkElementOfArray += myColor[myColor.length - 1] + '"';
+    document.write(linkElementOfArray + "<br>");
+    document.write(myColor.join(''));
+  </script>
+</body>
+</html>

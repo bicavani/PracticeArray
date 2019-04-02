@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Swap Uppercase to Lower and Vice versa</title>
+</head>
+<body>
+  <script>
+    let inputCharacter = prompt();
+    document.write(inputCharacter + "<br>");
+    let upperCase = "ASDFGHJKLZXCVBNMQWERTYUIOP";
+    let lowerCase = "asdfghjklzxcvbnmqwertyuiop";
+    let result = [];
+    for (let i = 0; i < inputCharacter.length; i++) {
+        for (let j = 0; j < upperCase.length; j++) {
+            if (inputCharacter[i] === upperCase[j]) {
+                result[i] = lowerCase[j];
+            }
+            else {
+                for (let k = 0; k < lowerCase.length; k++) {
+                    if (inputCharacter[i] === lowerCase[k]) {
+                        result[i] = upperCase[k];
+                    }
+                }
+            }
+        }
+    }
+    document.write(result.join(''));
+  </script>
+</body>
+</html>
