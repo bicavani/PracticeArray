@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dictionary</title>
+</head>
+<body>
+  <form>
+    <h3>English</h3>
+    <input id="english" type="text" name="english">
+    <input type="button" value="Translate" onclick="enTranslateVn()">
+    <h4 id="vietnamese"></h4>
+  </form>
+  <script>
+    let arrayEnglish = ["hello", "name", "age", "address", "one"];
+    let arrayVienamese = ["xin chao", "ten", "tuoi", "dia chi", "mot"];
+    let notOutputVietnamese = true;
+    function enTranslateVn() {
+        let inputEnglish = document.getElementById('english').value;
+        for (let i = 0; i < arrayEnglish.length; i++){
+            if (arrayEnglish[i] === inputEnglish) {
+                document.getElementById("vietnamese").innerHTML = arrayVienamese[i];
+                notOutputVietnamese = false;
+                break;
+            }
+            else notOutputVietnamese = true;
+        }
+        if (notOutputVietnamese) document.getElementById("vietnamese").innerHTML = ("Khong tim thay");
+    }
+  </script>
+</body>
+</html>
